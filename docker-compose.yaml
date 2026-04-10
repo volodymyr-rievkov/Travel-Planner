@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    container_name: travel-planner-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - travel_data:/app/data
+    environment:
+      - DATABASE_URL=sqlite:///./data/travel_planner.db
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  travel_data:
