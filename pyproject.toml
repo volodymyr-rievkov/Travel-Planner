@@ -1,0 +1,16 @@
+[project]
+name = "travel-planner-api"
+version = "0.1.0"
+description = "RESTful API for travel project management with Art Institute of Chicago integration"
+readme = "README.md"
+authors = [
+    { name = "Volodymyr Rievkov", email = "volodimirrevkov@gmail.com" }
+]
+requires-python = "==3.13.*"
+dependencies = [
+    "fastapi==0.135.3",
+    "httpx==0.28.1",
+    "pydantic==2.12.5",
+    "sqlalchemy==2.0.49",
+    "uvicorn==0.44.0",
+]
